@@ -1,80 +1,76 @@
-# Projeto Node.js com MongoDB - Documentação
+# Node.js Project with MongoDB
 
-Este projeto consiste em uma aplicação Node.js que utiliza o MongoDB para gerenciar categorias e tarefas. Foram implementados controladores para manipular as operações de CRUD (Create, Read, Update, Delete) para categorias e tarefas.
+This project is a Node.js application that uses MongoDB to manage categories and tasks. Controllers were implemented to handle CRUD (Create, Read, Update, Delete) operations for both categories and tasks.
 
-## Pré-requisitos
+## Prerequisites
 
-- Node.js instalado (v14.x ou superior)
-- MongoDB instalado e em execução
+- Node.js installed (v14.x or higher)  
+- MongoDB installed and running
 
-## Instalação
+## Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/iDimabR/kanban-crud.git
+`git clone https://github.com/iDimabR/kanban-crud.git` 
 
-2. Instale as dependências
-
-   ```bash
-   cd seu-repositorio
-   npm install
-
-## Configuração
-
-Certifique-se de configurar as variáveis de ambiente necessárias para a conexão com o MongoDB no arquivo `connection.js`.
-
-## Utilização
-
-Para iniciar a aplicação use:
+2. Install the dependencies:
 
 ```
-  npm start
+cd kanban-crud 
+npm install
 ```
 
-A aplicação iniciará um servidor Express na porta padrão.
+## Configuration
+
+Make sure to configure the required environment variables for MongoDB connection in the `connection.js` file.
+
+## Usage
+
+To start the application, run:
+
+npm start
+
+This will start an Express server on the default port.
 
 ## Endpoints
 
-### Categorias
+### Categories
 
-`GET /categories`
-Retorna todas as categorias.
+- `GET /categories` 
+  Returns all categories.
 
-`GET /categories/:id`
-Retorna uma categoria específica com base no ID.
+- `GET /categories/:id`
+  Returns a specific category by ID.
 
-`POST /categories/create`
-Cria uma nova categoria.
+- `POST /categories/create`
+  Creates a new category.
 
-`PUT /categories/:id`
-Atualiza uma categoria existente com base no ID.
+- `PUT /categories/:id`
+  Updates an existing category by ID.
 
-`DELETE /categories/:id`
-Deleta uma categoria existente com base no ID, removendo também as tarefas associadas a ela.
+- `DELETE /categories/:id`
+  Deletes a category by ID and also removes its associated tasks.
 
-### Tarefas
+### Tasks
 
-`GET /tasks`
-Retorna todas as tarefas.
+- `GET /tasks`
+  Returns all tasks.
 
-`GET /tasks/:id`
-Retorna todas as tarefas de uma categoria específica com base no ID da categoria.
+- `GET /tasks/:id`
+  Returns all tasks of a specific category by category ID.
 
-`POST /tasks/create`
-Cria uma nova tarefa.
+- `POST /tasks/create` 
+  Creates a new task.
 
-`PUT /tasks/:id`
-Atualiza uma tarefa existente com base no ID.
+- `PUT /tasks/:id`
+  Updates an existing task by ID.
 
-`DELETE /tasks/:id`
-Deleta uma tarefa existente com base no ID.
+- `DELETE /tasks/:id`
+  Deletes a task by ID.
 
-## Estrutura de Projeto
+## Project Structure
 
-- `controllers/` Contém os controladores de categorias e tarefas.
-- `models/` Contém os modelos de dados para categorias e tarefas.
-- `connection.js` Arquivo para configuração da conexão do MongoDB.
-- `index.js` Arquivo principal que inicia o servidor Express e define as rotas.
-
-
+- controllers/ → Contains the controllers for categories and tasks  
+- models/ → Contains the data models for categories and tasks  
+- connection.js → MongoDB connection configuration file  
+- index.js → Main file that starts the Express server and defines the routes
